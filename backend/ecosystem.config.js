@@ -1,4 +1,5 @@
-require('dotenv').config({ path: './.env.deploy' });
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '.env.example') });
 
 const {
   DEPLOY_USER, DEPLOY_HOST, DEPLOY_REF, DEPLOY_REPO, DEPLOY_PATH,
