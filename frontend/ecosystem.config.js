@@ -2,7 +2,7 @@ const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '.env.deploy') });
 
 const {
-  DEPLOY_USER, DEPLOY_HOST, DEPLOY_REF, DEPLOY_REPO, DEPLOY_PATH,
+  DEPLOY_USER, DEPLOY_HOST, DEPLOY_REF, DEPLOY_REPO, DEPLOY_PATH, DEPLOY_KEY
 } = process.env;
 
 module.exports = {
@@ -13,6 +13,7 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
       path: DEPLOY_PATH,
+      key: DEPLOY_KEY,
       'post-deploy': [
         'cd frontend',
         'npm install',
