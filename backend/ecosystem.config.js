@@ -23,9 +23,6 @@ module.exports = {
       'post-deploy': [
         `cd ${DEPLOY_PATH}/current/backend`,
         'cp ../../shared/backend.env .env',
-        'export NVM_DIR="$HOME/.nvm"',
-        '. "$NVM_DIR/nvm.sh"',
-        'nvm use 16',
         'npm install',
         'npm run build',
         'pm2 startOrRestart ./ecosystem.config.js --env production',
