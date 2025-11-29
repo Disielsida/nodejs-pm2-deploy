@@ -2,9 +2,9 @@
 
 ## Ссылки
 
-— IP aдрес: ``158.160.211.203``
+— IP aдрес: ```158.160.211.203```
 
-— Frontend: ```https://mestodisielsida.nomorepartiessbs.ru```
+— Frontend: https://mestodisielsida.nomorepartiessbs.ru
 
-— Backend: ```https://api.mestodisielsida.nomorepartiessbs.ru```
+— Backend: https://api.mestodisielsida.nomorepartiessbs.ru
 
