@@ -21,9 +21,10 @@ module.exports = {
       key: DEPLOY_KEY,
       'pre-deploy-local': `scp -i ${DEPLOY_KEY} ./.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/shared/backend.env`,
       'post-deploy': [
+        `cd ${DEPLOY_PATH}`,
         'export NVM_DIR="$HOME/.nvm"',
         '. "$NVM_DIR/nvm.sh"',
-        'cd backend',
+        'cd current/backend',
         `cp ${DEPLOY_PATH}/shared/backend.env .env`,
         'npm install',
         'npm run build',
