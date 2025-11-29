@@ -17,6 +17,7 @@ module.exports = {
       'post-deploy': [
         'export NVM_DIR="$HOME/.nvm"',
         '. "$NVM_DIR/nvm.sh"',
+        'nvm use 16',
         'cd frontend',
         'npm install',
         'npm run build',
