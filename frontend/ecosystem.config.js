@@ -15,6 +15,8 @@ module.exports = {
       path: DEPLOY_PATH,
       key: DEPLOY_KEY,
       'post-deploy': [
+        'export NVM_DIR="$HOME/.nvm"',
+        '. "$NVM_DIR/nvm.sh"',
         'cd frontend',
         'npm install',
         'npm run build',
