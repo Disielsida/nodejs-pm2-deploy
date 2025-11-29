@@ -25,7 +25,7 @@ module.exports = {
         'cp ../../shared/backend.env .env',
         'npm install',
         'npm run build',
-        'pm2 startOrRestart ../ecosystem.config.js --env production',
+        'pm2 startOrRestart ./ecosystem.config.js --env production',
       ].join(' && '),
     },
   },
